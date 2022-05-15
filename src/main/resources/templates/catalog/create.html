@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Catalog Creating form</title>
+
+    <link rel="stylesheet"
+          th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css}"/>
+    <script th:src="@{/webjars/bootstrap/5.1.3/js/bootstrap.min.js}"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <h3 class="pt-5">Áru hozzáadása</h3>
+
+    <div class="row">
+        <div class="col-md-4 mt-5">
+            <form method="post"
+                  th:action="@{/cata-log/create}">
+                <div class="form-group">
+                    <label for="name">Katalógus készítő</label>
+                </div>
+                <div class="form-group">
+                    <label for="name">ID</label>
+                    <input type="text"
+                           id="id"
+                           name="id"
+                           readonly
+                           class="form-control"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="name">Név</label>
+                    <input type="text"
+                           id="name"
+                           name="name"
+                           class="form-control"
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label for="price">Ár(ft)</label>
+                    <input type="number"
+                           id="price"
+                           name="price"
+                           min="1"
+                           step="1"
+                           class="form-control"
+                </div>
+
+                <div class="form-group">
+                    <label for="genre">Tipus</label>
+                    <input type="text"
+                           id="genre"
+                           name="genre"
+                           class="form-control"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="storage">Raktár</label>
+                    <input type="text"
+                           id="storage"
+                           name="storage"
+                           class="form-control"
+                    />
+                </div>
+
+                <button class="btn btn-primary pt-2 mt-2"
+                        type="submit">Új áru hozzáadása
+                </button>
+                <a th:href="@{/cata-log/create}"
+                   class="btn btn-secondary pt-2 mt-2"
+                   type="submit">Mégsem</a>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<script>
+
+</script>
+
+</body>
+</html>

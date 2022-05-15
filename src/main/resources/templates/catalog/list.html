@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Katalogus lista</title>
+
+    <link rel="stylesheet"
+          th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css}"/>
+    <script th:src="@{/webjars/bootstrap/5.1.3/js/bootstrap.min.js}"></script>
+</head>
+<body>
+
+<div class="container">
+    <h3 class="pt-5">Katalogus lista</h3>
+
+    <a th:href="@{/cata-log/create}"
+       type="button"
+       class="btn btn-info">Új áru hozzáadása</a>
+
+    <table class="table table-striped pt-5">
+        <caption>Árulista</caption>
+        <thread>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Név</th>
+                <th scope="col">Ár (Ft)</th>
+                <th scope="col">Tipus</th>
+                <th scope="col">Raktár</th>
+                <th scope="col">Műveletek</th>
+            </tr>
+        </thread>
+        <tbody>
+        <tr th:each="catalog: ${catalogs}">
+            <th scope="row"
+                th:text="${catalog.id}"></th>
+            <td th:text="${catalog.name}"></td>
+            <td th:text="${catalog.price}"></td>
+            <td th:text="${catalog.genre}"></td>
+            <td th:text="${catalog.storage}"></td>
+            <td>
+                <a th:href="@{'/cata-log/' + ${catalog.id}}"
+                   type="button"
+                   class="btn btn-warning">Szerkesztés</a>
+                <a th:href="@{'/cata-log/' + ${catalog.id} +  '/delete'}"
+                   type="button"
+                   class="btn btn-danger">Törlés</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+
+</script>
+
+</body>
+</html>
