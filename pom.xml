@@ -105,12 +105,12 @@
 								<limit>
 									<counter>LINE</counter>
 									<value>COVEREDRATIO</value>
-									<minimum>0%</minimum>
+									<minimum>80%</minimum>
 								</limit>
 								<limit>
 									<counter>BRANCH</counter>
 									<value>COVEREDRATIO</value>
-									<minimum>0%</minimum>
+									<minimum>80%</minimum>
 								</limit>
 							</limits>
 						</rule>
@@ -133,7 +133,7 @@
 				<configuration>
 					<consoleOutput>true</consoleOutput>
 					<encoding>UTF-8</encoding>
-					<configLocation>google_checks.xml</configLocation>
+					<configLocation>google_checkstyle.xml</configLocation>
 					<violationSeverity>warning</violationSeverity>
 					<violationIgnore>
 						CustomImportOrder,

@@ -25,8 +25,13 @@ public class CatalogServiceimp implements KatalogusService {
     Data_Base.add(new Catalog(4L, "Avon paris (160g)", 2700, Genre.Gyertya, Storage.igen));
   }
 
+  public CatalogServiceimp(List<Catalog> cataLogs) {
+    Data_Base.addAll(cataLogs);
+  }
+
   @Override
   public List<Catalog> getAllCatalog() {
+
     return Collections.unmodifiableList(Data_Base);
   }
 
