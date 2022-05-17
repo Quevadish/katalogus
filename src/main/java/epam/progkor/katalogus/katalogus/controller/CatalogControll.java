@@ -4,7 +4,6 @@ package epam.progkor.katalogus.katalogus.controller;
 import epam.progkor.katalogus.katalogus.model.Catalog;
 import epam.progkor.katalogus.katalogus.model.exceptions.NotFoundExceptations;
 import epam.progkor.katalogus.katalogus.service.KatalogusService;
-import java.util.List;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,6 +12,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.List;
 
 
 @Controller
@@ -27,6 +28,7 @@ public class CatalogControll {
 
   /**
    * maga a termékek.
+   *
    * @param model model.
    * @return return.
    */
@@ -39,8 +41,9 @@ public class CatalogControll {
 
   /**
    * termékek modositása.
+   *
    * @param model model.
-   * @param id id.
+   * @param id    id.
    * @return return.
    */
   @GetMapping("/{id}")
@@ -53,8 +56,9 @@ public class CatalogControll {
 
   /**
    * frissités.
-   * @param model model.
-   * @param id id.
+   *
+   * @param model          model.
+   * @param id             id.
    * @param catalogChanges áruváltozások.
    * @return return.
    */
@@ -69,7 +73,8 @@ public class CatalogControll {
 
   /**
    * létrehozás.
-   * @param model model.
+   *
+   * @param model   model.
    * @param catalog katalogus.
    * @return return.
    */
@@ -87,8 +92,9 @@ public class CatalogControll {
 
   /**
    * törlés.
+   *
    * @param model model.
-   * @param id id.
+   * @param id    id.
    * @return return.
    */
   @GetMapping("/{id}/delete")
