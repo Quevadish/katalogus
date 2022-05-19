@@ -8,8 +8,8 @@
 		<version>2.6.7</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>epam.progkor.katalogus</groupId>
-	<artifactId>katalogus</artifactId>
+	<groupId>epam.progkor.katalogus1</groupId>
+	<artifactId>katalogus1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>katalogus</name>
 	<description>Demo project for Spring Boot</description>
