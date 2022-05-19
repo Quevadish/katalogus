@@ -12,6 +12,7 @@ public class Catalog {
 
   /**
    * termék adatai.
+   *
    * @param id id.
    * @param name név.
    * @param price ár.
