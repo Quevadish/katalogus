@@ -7,6 +7,7 @@ public enum Genre {
   Smink,
   Gyertya,
   Illatositó,
-  Ékszer
+  Ékszer,
+  Sugarbaby
 
 }
